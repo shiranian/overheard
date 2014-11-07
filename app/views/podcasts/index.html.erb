@@ -1,6 +1,8 @@
+<h1>OverHeard</h1>
+
 <% @podcasts.each do |podcast| %>
   <p>title: <%= podcast.title %></p>
-  <%= podcast.length %>
-  <%= podcast.author %>
-  <%= podcast.genre %>
+  <p>length: <%= podcast.length %></p>
+  <p>author: <%= podcast.author %></p>
+  <p>podcast: <%= podcast.genre %></p>
 <% end %>
