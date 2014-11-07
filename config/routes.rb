@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :podcasts
+
   root to: 'moods#new' 
 
   get 'podcasts/create'

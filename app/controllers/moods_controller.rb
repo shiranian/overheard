@@ -4,6 +4,6 @@ class MoodsController < ApplicationController
 
   def set_sessions_mood 
     session[:mood] = params[:mood]
-    redirect_to podcasts_path(category: params[:mood]) 
+    redirect_to podcasts_path 
   end
 end

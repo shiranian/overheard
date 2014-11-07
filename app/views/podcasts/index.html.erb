@@ -1,8 +1,12 @@
 <h1>OverHeard</h1>
+<%= session[:mood].titleize %>
 
 <% @podcasts.each do |podcast| %>
   <p>title: <%= podcast.title %></p>
   <p>length: <%= podcast.length %></p>
   <p>author: <%= podcast.author %></p>
   <p>podcast: <%= podcast.genre %></p>
+  <audio src="<%= podcast.path %>" controls>
 <% end %>
+
+<%= link_to "Explore Again", root_path %>
