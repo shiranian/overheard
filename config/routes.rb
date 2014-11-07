@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
+
+  resources :podcasts
+  root to: 'podcasts#index' 
+
   get 'podcasts/index'
 
-  get 'podcasts/new'
 
   get 'podcasts/create'
 
-  get 'podcasts/show'
+  get 'podcasts/show', to: 'podcasts#show'
 
-  resources :podcasts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

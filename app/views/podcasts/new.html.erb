@@ -1,2 +1,11 @@
-<h1>Podcasts#new</h1>
-<p>Find me in app/views/podcasts/new.html.erb</p>
+<%= form_for @podcast do |f|  %>
+<%= f.label :title %> <br> 
+<%= f.text_field :title %> <br>
+<%= f.label :genre %> <br>
+<%= f.text_field :genre %> <br>
+<%= f.label :author %> <br>
+<%= f.text_field :author %> <br>
+<%= f.label :length %> <br>
+<%= f.text_field :length %> <br>
+<%= f.submit "Upload that shit" %>
+<% end %>
