@@ -2,14 +2,15 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :podcasts
-  root to: 'podcasts#index' 
-
-  get 'podcasts/index'
-
+  root to: 'moods#new' 
 
   get 'podcasts/create'
 
   get 'podcasts/show', to: 'podcasts#show'
+
+  get '/mood', to: 'moods#new'
+
+  get "/set_sessions_mood", :to=> "moods#set_sessions_mood"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

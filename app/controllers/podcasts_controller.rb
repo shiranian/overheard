@@ -1,9 +1,10 @@
 class PodcastsController < ApplicationController
   def index
-    @podcasts = Podcast.find_by_genre(params[:category]) || @podcast = Podcast.all
+    @podcasts = Podcast.where("genre = ?", params[:category]) || @podcast = Podcast.all
   end
 
   def new
+    print session[:hello]
     @podcast = Podcast.new
   end
 

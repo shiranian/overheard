@@ -1,8 +1,11 @@
 
 <p> ...put mood here...</p>
 <p> <%= @podcast.title %></p>
-<p>author: <%= @podcast.author %> </p>  
+<p>author: <%= @podcast.author %> </p> 
+<img src="" alt=""> 
 <audio src="<%= @podcast.path %>" controls>
 <p>Your browser does not support the audio element </p>
 </audio>
+<%= link_to "Explore again" %>
+<%= link_to "Dig deeper" %>
 
