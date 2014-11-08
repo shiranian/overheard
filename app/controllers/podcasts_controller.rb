@@ -4,7 +4,6 @@ class PodcastsController < ApplicationController
   end
 
   def new
-    print session[:hello]
     @podcast = Podcast.new
   end
 

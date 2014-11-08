@@ -4,6 +4,7 @@ class MoodsController < ApplicationController
 
   def set_sessions_mood 
     session[:mood] = params[:mood]
-    redirect_to podcasts_path 
+    podcasts = Podcast.where("genre = ?",params[:mood])
+    redirect_to podcast_path(podcasts.first)
   end
 end

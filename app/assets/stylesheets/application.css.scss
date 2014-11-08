@@ -17,11 +17,24 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
+audio {
+  width: 400px;
+}
 body {
-  background-color: #f9f2e7;
+  background-color: #9AC0CD;
   margin-top: -10px;
 
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  font-size: 16px;
+}
+
+img.podcast {margin-bottom: 20px;
 }
 
 .btn.btn-primary {

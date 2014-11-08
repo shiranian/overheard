@@ -1,12 +1,17 @@
-
-<p> ...put mood here...</p>
-<p> <%= session[:mood] %></p>
-<p> <%= @podcast.title %></p>
-<p>author: <%= @podcast.author %> </p> 
-<img src="" alt=""> 
-<audio src="<%= @podcast.path %>" controls>
-<p>Your browser does not support the audio element </p>
-</audio>
-<%= link_to "Explore again" %>
-<%= link_to "Dig deeper" %>
-
+<div class="row">
+  <div class="sm-col-12">
+    <div class="text-center">
+      <h2> <%= session[:mood].titleize %> </h2>
+      <h1> <%= @podcast.title %> </h1>
+      <h2><i> <%= @podcast.author %></i> </h2> 
+      <img src="http://placehold.it/400x400" alt="not available" class="podcast">
+      <br> 
+      <audio src="<%= @podcast.path %>" controls>
+      <p>Your browser does not support the audio element </p>
+      </audio>
+      <br>
+      <%= link_to "Explore again", root_path, class: "btn btn-primary" %> 
+      <%= link_to "Dig deeper", podcast_path(@podcast.next), class: "btn btn-primary" %> 
+    </div>
+  </div>
+</div>
