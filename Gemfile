@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.3.0'
 gem 'autoprefixer-rails'
 
+gem "paperclip", "~> 4.2"
+
 gem 'devise'
 gem 'better_errors'
 gem 'binding_of_caller'

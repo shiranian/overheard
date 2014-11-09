@@ -34,10 +34,23 @@ a {
   font-size: 16px;
 }
 
-img.podcast {margin-bottom: 20px;
+img {
+  margin-bottom: 20px;
+  width: 400px;
+  height: 350px;
 }
 
 .btn.btn-primary {
   margin-top: 20px; 
     width: 200px;
 }
+
+#signin-main, #signup-main {
+  margin-top: 20px;
+}
+
+input {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+

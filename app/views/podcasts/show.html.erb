@@ -4,9 +4,8 @@
       <h2> <%= session[:mood].titleize %> </h2>
       <h1> <%= @podcast.title %> </h1>
       <h2><i> <%= @podcast.author %></i> </h2> 
-      <img src="http://placehold.it/400x400" alt="not available" class="podcast">
-      <br> 
-      <audio src="<%= @podcast.path %>" controls>
+      <%= image_tag @podcast.cover.url(:medium), class: "image-reponsive" %> <br>
+      <audio src="<%= @podcast.path %>" controls id="audio">
       <p>Your browser does not support the audio element </p>
       </audio>
       <br>
@@ -14,4 +13,8 @@
       <%= link_to "Dig deeper", podcast_path(@podcast.next), class: "btn btn-primary" %> 
     </div>
   </div>
+
+  <script>
+    $("#audio").bind("ended", function(){ alert("show survey nowwww") });
+  </script>
 </div>

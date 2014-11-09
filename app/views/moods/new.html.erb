@@ -6,6 +6,7 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="text-center">
+        <%= favicon_link_tag 'surf.png', rel: 'apple-touch-icon', type: 'img/png' %>
         <%= link_to "Psychology", {:controller => "moods", :action => "set_sessions_mood", :mood => "psychology"}, class: "btn btn-primary" %><br>
         <%= link_to "Surfing", {:controller => "moods", :action => "set_sessions_mood", :mood => "surfing" }, class: "btn btn-primary" %><br>
         <%= link_to "Big Boobs girls", {:controller => "moods", :action => "set_sessions_mood", :mood => "titties" }, class: "btn btn-primary"%><br>
