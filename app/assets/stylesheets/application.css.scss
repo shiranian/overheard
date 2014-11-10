@@ -20,14 +20,20 @@
 audio {
   width: 400px;
 }
-body {
-  background-color: #9AC0CD;
-  margin-top: -10px;
 
+#header {
+  background-color: black;
+  margin-bottom: 60px;
+  padding: 50px;
+}
+body {
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 p {
-  font-size: 16px;
+  font-size: 24px;
 }
 
 a {
@@ -40,9 +46,19 @@ img {
   height: 350px;
 }
 
+#sign-up-button {
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 24px;
+ background-color: #00e600;
+ border-radius: 5px 5px;
+}
+
 .btn.btn-primary {
   margin-top: 20px; 
-    width: 200px;
+    width: 20px;
 }
 
 #signin-main, #signup-main {
@@ -50,7 +66,7 @@ img {
 }
 
 input {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 

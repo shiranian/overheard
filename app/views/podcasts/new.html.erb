@@ -1,12 +1,18 @@
-<%= form_for @podcast, :html => { :multipart => true } do |f|  %>
-<%= f.label :title %> <br> 
-<%= f.text_field :title %> <br>
-<%= f.label :genre %> <br>
-<%= f.text_field :genre %> <br>
-<%= f.label :author %> <br>
-<%= f.text_field :author %> <br>
-<%= f.label :length %> <br>
-<%= f.text_field :length %> <br>
-<%= f.file_field :cover %>
-<%= f.submit "Upload that shit" %>
-<% end %>
+<div class="row">
+  <div class="sm-col-4">
+    <div class="sm-col-offset-4">
+    <%= form_for @podcast, :html => { :multipart => true } do |f|  %>
+    <%= f.label :title %> <br> 
+    <%= f.text_field :title %> <br>
+    <%= f.label :genre %> <br>
+    <%= f.text_field :genre %> <br>
+    <%= f.label :author %> <br>
+    <%= f.text_field :author %> <br>
+    <%= f.label :length %> <br>
+    <%= f.text_field :length %> <br>
+    <%= f.file_field :cover %>
+    <%= f.submit "Upload that shit" %>
+  <% end %>
+  </div>
+  </div>
+</div>
