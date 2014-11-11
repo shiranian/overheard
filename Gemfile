@@ -19,6 +19,9 @@ gem 'autoprefixer-rails'
 gem "paperclip", "~> 4.2"
 
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'aws-sdk'
+
+gem 'figaro'
 
 gem 'devise'
 gem 'better_errors'
