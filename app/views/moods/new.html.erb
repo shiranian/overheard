@@ -6,12 +6,11 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="text-center">
-        <%= favicon_link_tag 'surf.png', rel: 'apple-touch-icon', type: 'img/png' %>
-        <%= link_to "Psychology", {:controller => "moods", :action => "set_sessions_mood", :mood => "psychology"}, class: "btn btn-primary" %><br>
-        <%= link_to "Surfing", {:controller => "moods", :action => "set_sessions_mood", :mood => "surfing" }, class: "btn btn-primary" %><br>
-        <%= link_to "Big Boobs girls", {:controller => "moods", :action => "set_sessions_mood", :mood => "titties" }, class: "btn btn-primary"%><br>
-        <%= link_to "Technology", {:controller => "moods", :action => "set_sessions_mood", :mood => "technology" }, class: "btn btn-primary"%><br>
-        <%= link_to "Economics", {:controller => "moods", :action => "set_sessions_mood", :mood => "economics" }, class: "btn btn-primary"%><br>
+        <%= link_to "Psychology", {:controller => "moods", :action => "set_sessions_mood", :mood => "psychology"}, class: "btn btn-primary btn-block btn-lg" %>
+        <%= link_to "Surfing", {:controller => "moods", :action => "set_sessions_mood", :mood => "surfing" }, class: "btn btn-primary btn-block btn-lg" %>
+        <%= link_to "Big Boobs girls", {:controller => "moods", :action => "set_sessions_mood", :mood => "titties" }, class: "btn btn-primary btn-block btn-lg" %>
+        <%= link_to "Technology", {:controller => "moods", :action => "set_sessions_mood", :mood => "technology" }, class: "btn btn-primary btn-block btn-lg" %>
+        <%= link_to "Economics", {:controller => "moods", :action => "set_sessions_mood", :mood => "economics" }, class: "btn btn-primary btn-block btn-lg" %>
       </div>
     </div>
   </div>

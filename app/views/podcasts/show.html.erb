@@ -1,20 +1,33 @@
 <div class="row">
-  <div class="sm-col-12">
-    <div class="text-center">
-      <h2> <%= session[:mood].titleize %> </h2>
-      <h1> <%= @podcast.title %> </h1>
-      <h2><i> <%= @podcast.author %></i> </h2> 
-      <%= image_tag @podcast.cover.url(:medium), class: "image-reponsive" %> <br>
-      <audio src="<%= @podcast.path %>" controls id="audio">
-      <p>Your browser does not support the audio element </p>
-      </audio>
-      <br>
-      <%= link_to "Explore again", root_path, class: "btn btn-primary" %> 
-      <%= link_to "Dig deeper", podcast_path(@podcast.next), class: "btn btn-primary" %> 
-    </div>
+  <div class="sm-col-12 text-center">
+      <h3> <%= session[:mood].titleize %> </h3>
+      <h22> <%= @podcast.title %> </h2>
+    <h3><i> <%= @podcast.author %></i> </h3> 
   </div>
+</div>
 
-  <script>
+
+<div class="row">
+  <div class="sm-col-12 text-center">
+    <%= image_tag @podcast.cover.url(:medium), class: "image-reponsive" %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="sm-col-12 text-center">
+    <audio src="<%= @podcast.path %>" controls id="audio">
+    </audio>
+  </div>
+</div>
+
+<div class="row">
+  <div class="sm-col-12 text-center">
+    <%= link_to "Explore again", root_path, class: "btn btn-primary btn-lg" %>
+    <%= link_to "Dig deeper", podcast_path(@podcast.next), class: "btn btn-primary btn-lg" %>
+  </div>
+</div>
+    
+      <script>
     $("#audio").bind("ended", function(){ alert("hello cosmo this podcast finished!!!!") });
   </script>
 </div>
