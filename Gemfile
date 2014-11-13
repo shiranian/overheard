@@ -35,6 +35,11 @@ group :test do
   gem 'capybara'
 end
 
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
