@@ -12,6 +12,8 @@
     <%= f.text_field :length %> <br>
     <%= f.label :cover_photo %> <br>
     <%= f.file_field :cover %> <br>
+    <%= f.label :audio %>
+    <%= f.file_field :audio %>
     <%= f.label :tags!, "Tags (separated by commas dudes!" %> <br> 
     <%=  f.text_field :tag_list %> <br>   
     <%= f.submit "Upload that shit" %>
