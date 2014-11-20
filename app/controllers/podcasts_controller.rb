@@ -17,6 +17,19 @@ class PodcastsController < ApplicationController
     end
   end
 
+  def edit
+    @podcast = Podcast.find(params[:id])
+  end
+
+  def update
+    @podcast = Podcast.find(params[:id])
+    if @podcast.update(podcast_params)
+      redirect_to @podcast
+    else
+      render "edit"
+    end
+  end
+
   def show
     @podcast = Podcast.find(params[:id])
   end
