@@ -21,8 +21,8 @@
 
 <div class="row">
   <div class="sm-col-12 text-center">
-    <%= link_to "Explore again", root_path, class: "btn btn-primary btn-lg" %>
-    <%= link_to "Dig deeper", podcast_path(@podcast.next), class: "btn btn-primary btn-lg" %>
+    <%= link_to "Explore again", podcast_path(@podcast.random_podcast), class: "btn btn-primary btn-lg" %>
+    <%= link_to "Dig deeper", podcast_path(@podcast.next_similar_podcast), class: "btn btn-primary btn-lg" %>
   </div>
 </div>
 

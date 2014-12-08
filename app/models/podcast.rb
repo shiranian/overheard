@@ -23,6 +23,36 @@ has_attached_file :audio, :storage => :s3,
    acts_as_taggable
   
    def next
-    Podcast.where("genre = ? AND id > ?", self.genre, self.id).take || Podcast.where("genre = ?", self.genre).first
-  end
+     Podcast.where("genre = ? AND id > ?", self.genre, self.id).take || Podcast.where("genre = ?", self.genre).first
+   end
+
+   def next_similar_podcast
+     podcasts = Podcast.includes(:tags)
+     podcasts.each do |podcast|
+      return podcast if has_n_or_more_tags(3, podcast) && podcast.id != self.id 
+     end 
+    random_podcast 
+   end
+
+   def random_podcast
+    podcasts = Podcast.where("genre = ?", self.genre)
+    podcasts_collection = podcasts.to_a
+    current_id = self.id
+    random_podcast_id = current_id # sets it initally to same id to make while condition true
+    
+    while current_id == random_podcast_id do   #makes sure it doesn't return same id as current podcast
+      random_podcast_id = Random.new.rand(podcasts_collection.length)
+    end
+    podcasts_collection[random_podcast_id]
+   end
+
+   def has_n_or_more_tags(n, podcast)
+    num_tags = 0
+    self.tag_list.each do |tag|
+      if(podcast.tag_list.include?(tag))
+         num_tags +=1
+      end
+    end
+    num_tags >= n 
+   end
 end
