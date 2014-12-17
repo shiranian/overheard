@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141216185059) do
+ActiveRecord::Schema.define(version: 20141217040638) do
 
   create_table "podcasts", force: true do |t|
     t.string   "title"
@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(version: 20141216185059) do
     t.integer  "audio_file_size"
     t.datetime "audio_updated_at"
     t.string   "mood"
+  end
+
+  create_table "ratings", force: true do |t|
+    t.boolean  "relevant"
+    t.integer  "stars"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "podcast_id"
   end
 
   create_table "taggings", force: true do |t|

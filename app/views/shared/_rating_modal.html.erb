@@ -17,9 +17,9 @@
            <input type="radio" name="star-rating" value="5">5<br> 
           </div>
           <div class="form-group">
-            <label for="relavant-rating" class="control-label">Was episode a reasonable recommendation?</label><br>
-           <input type="radio" name="relavant-rating" value="yes">Yes<br> 
-           <input type="radio" name="relavant-rating" value="no">No<br> 
+            <label for="relevant-rating" class="control-label">Was episode a reasonable recommendation?</label><br>
+           <input type="radio" name="relevant-rating" value="yes">Yes<br> 
+           <input type="radio" name="relevant-rating" value="no">No<br> 
           </div>
         </form>
       </div>
@@ -32,11 +32,22 @@
 </div>
 
   <script>
-    $("#hitme").click(function() {
-      $('#surveyModal').modal('show');
-    })
+    var starValue;
+    var relevantRating;
+    var podcastId = <%= @podcast.id %>;
+
+     $("input:radio[name=star-rating]").click(function() {
+       starValue = $(this).val();
+       });
+      
+     $("input:radio[name=relevant-rating]").click(function() {
+       relevantRating= $(this).val();
+      });
 
     $("#survey-modal-submit").click(function() {
+      $.post("/ratings", {starvalue: starValue, relevantrating: relevantRating, podcastid: podcastId}, function() {
+        document.location = "<%= podcast_path(@podcast.next_similar_podcast) %>"
+      })
       $("#surveyModal").modal('hide');
     })
 </script>

@@ -16,6 +16,8 @@ has_attached_file :audio, :storage => :s3,
   },
   :url =>':s3_domain_url',
   :path => '/:class/:attachment/:id_partition/:style/:filename'
+
+  has_many :ratings
   
   validates_attachment :audio, content_type: { :content_type => ["audio/mpeg", "audio/mp3"] }
   
