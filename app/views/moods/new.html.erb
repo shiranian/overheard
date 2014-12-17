@@ -17,5 +17,15 @@
         <%= link_to "Curious Core", {:controller => "moods", :action => "set_sessions_mood", :mood => "curious core" }, class: "btn btn-primary btn-block btn-lg" %>
         <%= link_to "Current Events", {:controller => "moods", :action => "set_sessions_mood", :mood => "current events" }, class: "btn btn-primary btn-block btn-lg" %>
       </div>
+    <%= render "shared/rating_modal" %>
     </div>
   </div>
+  <script>
+    $("#hitme").click(function() {
+      $('#surveyModal').modal('show');
+    })
+
+    $("#survey-modal-submit").click(function() {
+      $("#surveyModal").modal('hide');
+    })
+  </script>

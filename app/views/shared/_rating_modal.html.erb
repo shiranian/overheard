@@ -1,0 +1,44 @@
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#surveyModal" data-whatever="@twbootstrap">Open modal for @twbootstrap</button>
+<div class="modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="surveyModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="surveyModalLabel">Answer quick question</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="form-group">
+            <label for="star-rating" class="control-label">How much did you enjoy this episode?</label><br>
+           <input type="radio" name="star-rating" value="1">1<br>
+           <input type="radio" name="star-rating" value="2">2<br> 
+           <input type="radio" name="star-rating" value="3">3<br> 
+           <input type="radio" name="star-rating" value="4">4<br> 
+           <input type="radio" name="star-rating" value="5">5<br> 
+          </div>
+          <div class="form-group">
+            <label for="relavant-rating" class="control-label">Was episode a reasonable recommendation?</label><br>
+           <input type="radio" name="relavant-rating" value="yes">Yes<br> 
+           <input type="radio" name="relavant-rating" value="no">No<br> 
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="survey-modal-submit">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    $("#hitme").click(function() {
+      $('#surveyModal').modal('show');
+    })
+
+    $("#survey-modal-submit").click(function() {
+      $("#surveyModal").modal('hide');
+    })
+</script>
+
+
