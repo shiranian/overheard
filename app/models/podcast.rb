@@ -28,14 +28,33 @@ has_attached_file :audio, :storage => :s3,
      Podcast.where("genre = ? AND id > ?", self.genre, self.id).take || Podcast.where("genre = ?", self.genre).first
    end
 
+   def average_rating
+     num_ratings = self.ratings.count.to_f
+     num_stars = 0.0
+     self.ratings.each do |rating|
+      num_stars += rating.stars
+     end
+     average = num_stars / num_ratings
+     average
+   end
+
    def next_similar_podcast
      podcasts = Podcast.includes(:tags)
      podcasts.each do |podcast|
-      return podcast if has_n_or_more_tags(3, podcast) && podcast.id != self.id 
+      return podcast if has_n_or_more_tags(3, podcast) && podcast.id != self.id  && has_similar_mood(podcast)
      end 
     random_podcast 
    end
-
+    
+   def has_similar_mood(next_podcast)
+     if self.mood ==  'sad'
+       return next_podcast.mood === 'indifferent'
+     elsif self.mood == 'happy'
+       return next_podcast.mood == 'indifferent'
+    else
+      return next_podcast.mood == 'happy' || next_podcast.mood == 'sad'
+    end
+   end
    def random_podcast
     podcasts = Podcast.where("genre = ?", self.genre)
     podcasts_collection = podcasts.to_a
