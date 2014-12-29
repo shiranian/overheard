@@ -39,7 +39,7 @@ has_attached_file :audio, :storage => :s3,
    end
 
    def next_similar_podcast
-     podcasts = Podcast.includes(:tags)
+     podcasts = Podcast.includes(:tags) #change this to only query for podcasts with similar genre to improve efficiency
      podcasts.each do |podcast|
       return podcast if has_n_or_more_tags(3, podcast) && podcast.id != self.id  && has_similar_mood(podcast)
      end 
