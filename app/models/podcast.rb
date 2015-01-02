@@ -28,16 +28,7 @@ has_attached_file :audio, :storage => :s3,
      Podcast.where("genre = ? AND id > ?", self.genre, self.id).take || Podcast.where("genre = ?", self.genre).first
    end
 
-   def average_rating
-     num_ratings = self.ratings.count.to_f
-     num_stars = 0.0
-     self.ratings.each do |rating|
-      num_stars += rating.stars
-     end
-     average = num_stars / num_ratings
-     average
-   end
-
+   
    def next_similar_podcast
      podcasts = Podcast.includes(:tags) #change this to only query for podcasts with similar genre to improve efficiency
      podcasts.each do |podcast|
@@ -46,25 +37,25 @@ has_attached_file :audio, :storage => :s3,
     random_podcast 
    end
     
-   def has_similar_mood(next_podcast)
+   def has_similar_mood(next_podcast) #boolean to check if current podcast and podcast passed in as argument have similar mood
      if self.mood ==  'sad'
-       return next_podcast.mood === 'indifferent'
+       return next_podcast.mood == 'indifferent' || next_podcast.mood = self.mood 
      elsif self.mood == 'happy'
-       return next_podcast.mood == 'indifferent'
+       return next_podcast.mood == 'indifferent' || next_podcast.mood == self.mood 
     else
-      return next_podcast.mood == 'happy' || next_podcast.mood == 'sad'
+      return next_podcast.mood == 'happy' || next_podcast.mood == 'sad' || next_podcast.mood == self.mood
     end
    end
+
    def random_podcast
     podcasts = Podcast.where("genre = ?", self.genre)
     podcasts_collection = podcasts.to_a
-    current_id = self.id
-    random_podcast_id = current_id # sets it initally to same id to make while condition true
+    random_podcast_id = self.id# sets it initally to same id to make while condition true
     
     while current_id == random_podcast_id do   #makes sure it doesn't return same id as current podcast
       random_podcast_id = Random.new.rand(podcasts_collection.length)
     end
-    podcasts_collection[random_podcast_id]
+     podcasts_collection[random_podcast_id]
    end
 
    def has_n_or_more_tags(n, podcast)
@@ -75,5 +66,15 @@ has_attached_file :audio, :storage => :s3,
       end
     end
     num_tags >= n 
+   end
+
+   def average_rating
+     num_ratings = self.ratings.count.to_f
+     num_stars = 0.0
+     self.ratings.each do |rating|
+       num_stars += rating.stars
+     end
+     average = num_stars / num_ratings
+     average
    end
 end
