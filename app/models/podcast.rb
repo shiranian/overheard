@@ -52,7 +52,7 @@ has_attached_file :audio, :storage => :s3,
     podcasts_collection = podcasts.to_a
     random_podcast_id = self.id# sets it initally to same id to make while condition true
     
-    while current_id == random_podcast_id do   #makes sure it doesn't return same id as current podcast
+    while self.id == random_podcast_id do   #makes sure it doesn't return same id as current podcast
       random_podcast_id = Random.new.rand(podcasts_collection.length)
     end
      podcasts_collection[random_podcast_id]
