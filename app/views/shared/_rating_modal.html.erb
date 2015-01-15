@@ -63,13 +63,13 @@
 
       $("#survey-modal-submit").click(function() {
         $.post("/ratings", {starvalue: starValue, relevantrating: relevantRating, podcastid: podcastId}, function() {
-          document.location = "<%= podcast_path(@podcast.next_similar_podcast) %>"
+          document.location = "<%= podcast_path(@podcast.next_similar_podcast(@authors)) %>"
         })
         $("#surveyModal").modal('hide');
       })
     }
     else {
-      document.location = "<%= podcast_path(@podcast.next_similar_podcast) %>"
+      document.location = "<%= podcast_path(@podcast.next_similar_podcast(@authors)) %>"
     }
    })    
  })

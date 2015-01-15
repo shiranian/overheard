@@ -1,4 +1,5 @@
 class PodcastsController < ApplicationController
+  before_filter :get_podcast_and_set_author_state, only: [:show]
   def index
     @podcasts = Podcast.where("genre = ?", params[:category]) || @podcast = Podcast.all
   end
@@ -31,11 +32,17 @@ class PodcastsController < ApplicationController
   end
 
   def show
-    @podcast = Podcast.find(params[:id])
+    @authors = @author_state.authors
   end
 
   private
   def podcast_params 
     params.require(:podcast).permit(:title, :author, :genre, :length, :cover, :tag_list, :audio)
+  end
+
+  def get_podcast_and_set_author_state
+    @podcast = Podcast.find(params[:id])
+    @author_state = AuthorState.new(session)
+    @author_state.push(@podcast.author)
   end
 end
