@@ -23,6 +23,8 @@ has_attached_file :audio, :storage => :s3,
   
   validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
    acts_as_taggable
+
+  GENRES = %w(curious\ core learning\ corner news\ outlook storytelling people\ &\ ideas experimental)  
   
    def next
      Podcast.where("genre = ? AND id > ?", self.genre, self.id).take || Podcast.where("genre = ?", self.genre).first
