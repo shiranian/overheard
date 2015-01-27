@@ -32,15 +32,6 @@
 
  <script>
   
-  function hasDugDeeper() {
-    if(!sessionStorage.hasSeen)
-      sessionStorage.hasSeen = true;
-      return false;
-    else {
-      return true;
-    }
-  }
-
   $(document).ready(function() {
     var starValue;
     var relevantRating;
@@ -49,7 +40,7 @@
       e.preventDefault();
       var podcastId = <%= @podcast.id %>;
       var audio = $("#audio")[0];
-    if(audio.currentTime >= 60 && hasDugDeeper()) {
+    if(audio.currentTime >= 60) {
       audio.pause();
       $("#surveyModal").modal('show');
         $("input:radio[name=star-rating]").click(function() {

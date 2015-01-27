@@ -71,12 +71,11 @@ has_attached_file :audio, :storage => :s3,
    end
 
    def average_rating
-     num_ratings = self.ratings.count.to_f
+     num_ratings = self.ratings.count.to_f || 0
      num_stars = 0.0
      self.ratings.each do |rating|
        num_stars += rating.stars
      end
-     average = num_stars / num_ratings
-     average
+     average = (num_stars / num_ratings)
    end
 end
