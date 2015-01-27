@@ -25,6 +25,7 @@ has_attached_file :audio, :storage => :s3,
    acts_as_taggable
 
   GENRES = %w(curious\ core learning\ corner news\ outlook storytelling people\ &\ ideas experimental)  
+  MOODS = %w(happy sad indifferent)
   
    def next
      Podcast.where("genre = ? AND id > ?", self.genre, self.id).take || Podcast.where("genre = ?", self.genre).first

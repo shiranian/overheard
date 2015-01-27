@@ -37,7 +37,7 @@ class PodcastsController < ApplicationController
 
   private
   def podcast_params 
-    params.require(:podcast).permit(:title, :author, :genre, :length, :cover, :tag_list, :audio)
+    params.require(:podcast).permit(:title, :author, :genre, :length, :cover, :tag_list, :audio, :mood)
   end
 
   def get_podcast_and_set_author_state
