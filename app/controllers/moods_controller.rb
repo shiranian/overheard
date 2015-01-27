@@ -5,6 +5,7 @@ class MoodsController < ApplicationController
   def set_sessions_mood 
     session[:mood] = params[:mood]
     podcasts = Podcast.where("genre = ?",params[:mood])
-    redirect_to podcast_path(podcasts.first)
+    num_podcasts = podcasts.length
+    redirect_to podcast_path(podcasts[Random.rand(num_podcasts)])
   end
 end
