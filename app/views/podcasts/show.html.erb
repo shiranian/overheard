@@ -1,31 +1,14 @@
-<div class="row">
-  <div class="sm-col-12 text-center">
-    <%= link_to "Back", root_path, class: "btn btn-primary" %>
-    <h3> <%= @podcast.genre.titleize %> </h3>
-      <h2> <%= @podcast.title %> </h2>
-    <h3><i> <%= @podcast.author %></i> </h3> 
-  </div>
-</div>
+<%= link_to "Back", root_path, class: "btn btn-primary" %>
+<h3> <%= @podcast.genre.titleize %> </h3>
+<h2> <%= @podcast.title %> </h2>
+<h3><i> <%= @podcast.author %></i> </h3> 
 
-<div class="row">
-  <div class="sm-col-12 text-center">
-    <%= image_tag @podcast.cover.url(:medium), class: "image-reponsive" %>
-  </div>
-</div>
+<%= image_tag @podcast.cover.url(:medium), class: "PUT CLASS HERE" %>
+<audio src="<%= @podcast.audio.url%>" controls id="audio">
+</audio>
 
-<div class="row">
-  <div class="sm-col-12 text-center">
-    <audio src="<%= @podcast.audio.url%>" controls id="audio">
-    </audio>
-  </div>
-</div>
-
-<div class="row">
-  <div class="sm-col-12 text-center">
-    <%= link_to "Explore again", podcast_path(@podcast.random_podcast), class: "btn btn-primary btn-lg" %>
-    <%= link_to "Dig deeper", podcast_path(@podcast.next_similar_podcast(@authors)), class: "btn btn-primary btn-lg", id: "dip-deeper" %>
-  </div>
-</div>
+<%= link_to "Explore again", podcast_path(@podcast.random_podcast), class: "CAN ADD CLASS HERE" %>
+<%= link_to "Dig deeper", podcast_path(@podcast.next_similar_podcast(@authors)), class: "CAN ADD CLASS HERE", id: "CAN ADD ID LIKE THIS" %>
 
 <%= render "shared/rating_modal" %>
 
