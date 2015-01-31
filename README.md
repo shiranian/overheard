@@ -7,27 +7,40 @@ Interesting way to think about persisting data and trying to act as if a mobile 
 
 Adding Styling:
 
-1. All html files are located under app/views/
-  you will see a few directories under /views
-  /Devise/ contains all of the views that have to do with user sign in, registration, etc
-  You only care about two of these:
-  Devise/registrations/new.html.erb is for registering for the app
-  Devise/sessions/new.html.erb is the sign in page
+The application is built in Ruby.  The html files all are "html.erb".  Don't worry about this, it just means that the files contain embedded ruby, which is how we dynamically generate html with Ruby.  You might see methods like "link_to("foo", bar_path, class: 'baz').  This renders an anchor tag like so <a href="bar_path" class="baz">foo</a>
+If you want feel free to just edit the ruby methods like so, but if this is sort of confusing then you can just create the pages with html and I will go back and convert it to Ruby syntax when you're done.  I will still be able to use all of the same classes and Id's for styling so it won't be *too much work for me. 
 
-  /layouts/application.html.erb
-    Anything in this file will show up on any html file across the project, where it says yield is where the other files get yielded into and rendered, For example you could put a footer or nav bar in this file either below or above the yield and it will show up on every single page of the app
 
- moods/new.html.erb is the page for choosing which type of podcast user wants to listen to 
+Here's a breakdown of each of the files you need to edit:
 
-All of the podcast views are under /podcasts
+Anything you want to be present across the whole app (footer, header, nav bar, etc)
+puts in app/views/layouts/application.html.erb
+
+you'll see a "yield", that is where every page get loaded into so anything above or below it will be surrounding it.
+
+Sign in page:
+app/views/devise/sessins/new.html.erb
+
+Sign up page:
+app/views/devie/registrations/new.html.erb
+
+main podcast page where podcasts play from:
+app/views/podcasts/show.html.erb
+
+page to add new podcasts:
+app/views/podcasts/new.html.erb
+
+firt page app takes you too once user logs in:
+app/views/moods/new.html.erb
+
+
+IMAGES:
+
+put all images under app/assets/image/
+that way you can reference them just by their file name and it will automatically look at that path.
 
 
 Stylesheets
   you can find the main stylesheet to use under app/assets/stylesheets/application.css.scss
  
-Images
-  images can be found under app/assets/images   
-images can be referenced their name as long as they are stored here for example:
-images/name.png can be rendered with: 
-  image_tag("person.png")
 
