@@ -44,3 +44,17 @@ Stylesheets
   you can find the main stylesheet to use under app/assets/stylesheets/application.css.scss
  
 
+Important methods:
+
+link_to("text of link", "http://url.com", class: "puts classes in these quotes", id: "put id in here")
+returns <a href="http://url.com" class="adsfasfsadf" id="asdfasfads">text of link </a>
+
+image_tag("icon.png", size: "16x10", alt: "Edit Entry")   the second two argument (size, alt) are both optional you could also just do:
+image_tag("icon.png")
+
+this will look for the file under app/assets/images/
+
+
+http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html
+here's link to the form documentation
+# => <img src="/assets/icon.png" width="16" height="10" alt="Edit Entry" />
