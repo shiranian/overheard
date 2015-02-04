@@ -72,3 +72,19 @@ input {
 input[type="file"] {
   display: inline;
 }
+
+
+#global_box{
+    
+    width:600px;
+    height:450px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-225px 0 0 -300px; 
+    min-height: 450px;
+    min-width:600px;
+    border:3px solid #003333;
+    background: #009999;
+        
+}
