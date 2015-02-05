@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-sm-12">
-    <h1 class="text-center">I'm Feeling</h1>
+    <h1 class="text-center" id="mood-title">Menu</h1>
   </div>
 </div>
   <div class="row">
     <div class="col-sm-12">
       <div class="text-center">
-        <%= link_to "Curious Core", {:controller => "moods", :action => "set_sessions_mood", :mood => "curious core"}, class: "btn btn-primary btn-block btn-lg" %>
+        <%= link_to "Classics", {:controller => "moods", :action => "set_sessions_mood", :mood => "curious core"}, class: "btn btn-primary btn-block btn-lg" %>
         <%= link_to "Learning Corner", {:controller => "moods", :action => "set_sessions_mood", :mood => "learning corner" }, class: "btn btn-primary btn-block btn-lg" %>
         <%= link_to "News Outlook", {:controller => "moods", :action => "set_sessions_mood", :mood => "news outlook" }, class: "btn btn-primary btn-block btn-lg" %>
         <%= link_to "Storytelling", {:controller => "moods", :action => "set_sessions_mood", :mood => "storytelling" }, class: "btn btn-primary btn-block btn-lg" %>
