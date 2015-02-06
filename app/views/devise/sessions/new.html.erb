@@ -5,7 +5,7 @@
   <div class="sm-col-12 text-center">
     <%= image_tag("logo_with_name.png", class:"logo-with-name") %>
       
-      <p><%= link_to "or Sign up", new_user_registration_path %></p>
+      <!-- <p><%= link_to "or Sign up", new_user_registration_path %></p> -->
       
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
@@ -18,17 +18,27 @@
         <%= f.password_field :password, autocomplete: "off" , placeholder:"password" %>
       </div>
 
-      <% if devise_mapping.rememberable? -%>
-        <div class="field">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-        </div>
-      <% end -%>
+      <!--COMMENTED OUT REMEMBER ME OPTION TO RESPECT THE DESING LAYOUT -->
+      <!--<% if devise_mapping.rememberable? %>-->
+      <!--    <div class="field">-->
+      <!--    <%= f.check_box :remember_me %>-->
+      <!--    <%= f.label :remember_me %>-->
+      <!--  </div>-->
+      <!--  <% end -%>-->
+        
 
-      <div class="actions">
-        <%= f.submit "Log in" %>
+        <div id ="button-container">
+            <div class="actions sign-in-button"   >
+                <%= f.submit "login" %>
+            </div>
+            <p id="simple-or-text">- or -</p>
+            <div class ="sign-in-button">  
+                <p><%= link_to "sign up" , new_user_registration_path %></p>
+                </div>
+        </div>
+    
       </div>
     <% end %>
-    <%= render "devise/shared/forgot_password" %>
+   <!-- <%= render "devise/shared/forgot_password" %> -->
   </div>
 </div>
