@@ -1,6 +1,13 @@
+<div class="orange-separator"></div>
 <div class="row" id="signup-main">
+    
+    
+    
+    
   <div class="sm-col-12 text-center">
-  <h2>Sign up</h2>
+      
+      <%= image_tag("logo_with_name.png", class:"logo-with-name") %>
+  <!--<h2>Sign up</h2> -->
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
@@ -12,22 +19,22 @@
 
     <div class="field">
      <!-- <p> <%= f.label :password %></p> -->
-      <% if @validatable %>
-        <p>(<%= @minimum_password_length %> characters minimum)</p>
-      <% end %><br />
+     <!-- <% if @validatable %> -->
+      <!--  <p>(<%= @minimum_password_length %> characters minimum)</p> ... 8 characters min -->
+     <!-- <% end %><br /> -->
       <%= f.password_field :password, autocomplete: "off", placeholder:"password" %>
     </div>
 
     <div class="field">
-      <p>  <%= f.label :password_confirmation %></p><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <!--<p>  <%= f.label :password_confirmation %></p><br />-->
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"confirm password" %>
     </div>
 
     <div class="actions">
-      <%= f.submit "Sign up", id: "sign-up-button" %>
+      <%= f.submit "sign up", id: "sign-up-button"  %>
     </div>
   <% end %>
 
-  <%= render "devise/shared/links" %>
+ <!-- <%= render "devise/shared/links" %> -->
   </div>
 </div>

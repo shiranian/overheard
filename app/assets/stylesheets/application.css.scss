@@ -49,14 +49,27 @@ img {
 }
 
 #sign-up-button {
-  padding-right: 50px;
+ /* padding-right: 50px;
   padding-left: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 24px;
  background-color: #00e600;
  border-radius: 5px 5px;
+    */
+    
+    font-family: 'AntennaThin';
+    background-color: #006666;
+    width:70%;
+    margin-left: 0%;
+    margin-top: 20px;
+    height: 2.2em;
+    padding: 0px;
+    height: auto;
 }
+
+
+
 
 #signin-main, #signup-main {
   margin-top: 20px;
@@ -81,14 +94,14 @@ input[type="file"] {
 
 #global_box{
     
-    width:600px;
+    width:40%;
     height:450px;
     position:absolute;
     left:50%;
     top:50%;
-    margin:-225px 0 0 -300px; 
+    margin:-225px 0 0 -250px; 
     min-height: 450px;
-    min-width:600px;
+    min-width:500px;
     border:3px solid #003333;
     background: #009999;
         

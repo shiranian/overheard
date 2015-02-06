@@ -1,12 +1,20 @@
+/*
+
+This file contains all the styles for both
+the sign-in and sign-up pages
+
+*/
+
+
 .logo-with-name {
     
     height:170px;
-    width:120px;
+    width:140px;
     
 }
 
 
-#user_email, #user_password {
+#user_email, #user_password, #user_password_confirmation{
     
     border: 1px #003333 solid;
     background-color: #006666;
@@ -31,7 +39,6 @@
     height: auto;
     
 }
-
 
 
 #simple-or-text{
