@@ -13,10 +13,12 @@
     <%= f.select :mood, Podcast::MOODS %> <br> 
     <%= f.label :cover_photo %> 
     <%= f.file_field :cover %> <br>
-    <%= f.label :audio %> 
+    <%= f.label :audio %> <br>
     <%= f.file_field :audio %>
-    <%= f.label :tags!, "Tags (separated by commas dudes!)" %> <br> 
-    <%= f.text_field :tag_list %> <br>   
+    <!--<%= f.label :tags!, "Tags (separated by commas dudes!)" %> <br>  -->
+    <%= f.text_field :tag_list , placeholder:"Tags (separated by commas!)" , class:"gray-placeholder"%>  
+        
+        <!-- Sorry i had to take the fun from this file, but it wouldnt fit otherwise haha -->
     <%= f.submit "Upload that shit" %>
   <% end %>
   </div>
