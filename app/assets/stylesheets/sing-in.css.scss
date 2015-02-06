@@ -6,7 +6,7 @@
 }
 
 
-#user_email {
+#user_email, #user_password {
     
     border: 1px #003333 solid;
     background-color: #006666;
@@ -15,8 +15,25 @@
     padding-left:10px;
     font-family: 'AntennaThin';
     height: 2.2em;
+    width:35%;
 }
 
 
+/* Placeholder text to white for diferent browsers */
+::-webkit-input-placeholder {
+    color:white;   
+}
 
+:-moz-placeholder { 
+   color: white;  
+}
+
+::-moz-placeholder {  
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}
+/* Placeholder text to white for diferent browsers */
 
