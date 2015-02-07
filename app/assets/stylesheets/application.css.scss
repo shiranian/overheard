@@ -57,7 +57,7 @@ img {
     font-family: 'AntennaThin';
     background-color: #006666;
     width:100%;
-    margin-left: 0%;
+    margin-left: 0px;
     margin-top: 20px;
     height: 2.2em;
     padding: 0px;
@@ -68,7 +68,9 @@ img {
 
 
 #signin-main, #signup-main {
-  margin-top: 20px;
+  margin: 20px 0 0 0;
+  width: 100%;
+    
 }
 
 .btn-block {
@@ -125,7 +127,16 @@ input[type="file"] {
 .container-fluid {
     
     padding:0px;
+    
 }
 
 
+.alert {
+    
+    color:white;
+    font-size:1em;
+    //font-size-adjust: auto;
+    margin-bottom: 0px;
+    margin-top: -10px;
+}
 
