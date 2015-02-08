@@ -11,6 +11,7 @@ a.btn.btn-primary.btn-block.btn-lg {
     border-radius:0px;
     border:none;
     display: block;
+    padding-right: 51px; /*this centers the text of the button vertically because the play icon messes things up. its 16px of the original padding + the value of .play_clear '{margin-left}' below*/
 }
 
 
@@ -42,7 +43,7 @@ a.btn.btn-primary.btn-block.btn-lg:hover{
     text-align: left;
     font-size:1em;
     font-family:'AntennaThin';
-    margin:60px 0 0 20px;
+    margin:52px 0 0 20px;
     font-size-adjust: auto;
     
     
@@ -78,15 +79,27 @@ a.btn.btn-primary.btn-block.btn-lg:hover{
 
 .play_clear {
     
-    position: relative;
+    //position: relative;
     height:20px;
     width:20px;
     float: left;
     margin-top: 10px;
-    left:10%;
+    margin-bottom: 0px;
+    margin-left: 35px;
+    //z-index: -1;
+    //left:10%;
 }
 
 .mood_button_container {
     
     list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.mood_row {
+    
+ //display: inline;
+    margin: 5px 0 5px 0;
 }
