@@ -39,11 +39,13 @@ a.btn.btn-primary.btn-block.btn-lg:hover{
 
 .contact-email {
     
+    
     color:white;
-    text-align: left;
+    text-align: center;
     font-size:1em;
     font-family:'AntennaThin';
-    margin:52px 0 0 20px;
+    margin:30px 0 0 0px;
+    //vertical-align: middle;
     font-size-adjust: auto;
     
     
@@ -72,7 +74,7 @@ a.btn.btn-primary.btn-block.btn-lg:hover{
     width:40px;
     margin: 0 20px 0 0;
     float:right;
-    padding: 2px 15px 2px 15px;
+    padding: 3px 15px 3px 15px;
     
 }
 
@@ -100,6 +102,6 @@ a.btn.btn-primary.btn-block.btn-lg:hover{
 
 .mood_row {
     
- //display: inline;
+ 
     margin: 5px 0 5px 0;
 }
