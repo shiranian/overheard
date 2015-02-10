@@ -14,3 +14,122 @@
  *= require_self
  */
 
+audio {
+  width: 75%;
+  margin-bottom: 20px;
+}
+
+#header {
+  background-color: black;
+  margin-bottom: 60px;
+  padding: 50px;
+}
+body {
+  background-color: #000000;
+    font-family: 'AntennaThin';
+}
+
+p {
+  font-size: 24px;
+}
+
+a {
+    font-size: 16px;
+    color:white;
+    
+}
+
+img {
+  margin-bottom: 20px;
+  width: 75%;
+  height: 200px;
+}
+
+#sign-up-button {
+
+    
+    font-family: 'AntennaThin';
+    background-color: #006666;
+    width:100%;
+    margin-left: 0px;
+    margin-top: 20px;
+    height: 2.2em;
+    padding: 0px;
+  //  height: auto;
+}
+
+
+
+
+#signin-main, #signup-main {
+  margin: 20px 0 0 0;
+  width: 100%;
+    
+}
+
+.btn-block {
+margin-top: 0;
+margin-bottom: 0;
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  display: inline;
+}
+
+
+
+
+#global_box{
+    
+    //width:40%;
+    width:27.452%; //345 px
+    height:450px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-225px 0 0 -173px; 
+    min-height: 450px;
+    //min-width:500px;
+    //border:3px solid #003333;
+    background: #009999;
+        
+}
+
+.overheard-header {
+    
+    background-color:#ffffff;
+    letter-spacing: 1em;
+    text-align: center;
+    margin:0px 0 0 0;
+    
+}
+
+.orange-separator {
+    
+    background-color: #ff3333;
+    height:5px;
+    margin-bottom: 0px;
+    margin-top:0px;
+    width:100%;
+}
+
+.container-fluid {
+    
+    padding:0px;
+    
+}
+
+
+.alert {
+    
+    color:white;
+    font-size:1em;
+    //font-size-adjust: auto;
+    margin-bottom: 0px;
+    margin-top: -10px;
+}

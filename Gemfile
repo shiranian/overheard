@@ -39,10 +39,10 @@ group :test do
   gem 'factory_girl_rails'
 end
 
-group :production do
-  gem 'rails_12factor'
-  gem 'pg'
-end
+#group :production do
+#  gem 'rails_12factor'
+#  gem 'pg'
+#end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
