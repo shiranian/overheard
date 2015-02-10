@@ -1,3 +1,20 @@
 // Place all the styles related to the podcasts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*
+
+This file contains all of the styles for the new page podcast and
+the podcast player
+
+*/
+
+
+#podcast_tag_list::-webkit-input-placeholder {
+    color:gray;
+}
+
+#podcast_tag_list {
+    width:55%;
+}
