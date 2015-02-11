@@ -13,23 +13,8 @@
 
 <div class="orange-separator"></div>
 
-<div class="row">
-  <div class="sm-col-12 text-center">
-      
-      
-    <!-- <%= link_to "Back", root_path, class: "btn btn-primary" %>-->
-    <!--<h3> <%= @podcast.genre.titleize %> </h3>-->
-    
-          
-     
-      <%= link_to "", root_path, id:"mock" %> <!--link overlapping back button on header. see css -->
-      
-      
-      <h2> <%= @podcast.title %> </h2>
-    <h3><i> <%= @podcast.author %></i> </h3> 
-  </div>
-</div>
 
+<div id="background-color-change">
 <div class="row">
   <div class="sm-col-12 text-center">
     <%= image_tag @podcast.cover.url(:medium), class: "image-reponsive" %>
@@ -45,9 +30,24 @@
 
 <div class="row">
   <div class="sm-col-12 text-center">
+            
+    <!-- <%= link_to "Back", root_path, class: "btn btn-primary" %>-->
+    <!--<h3> <%= @podcast.genre.titleize %> </h3>-->
+
+      <%= link_to "", root_path, id:"mock" %> <!--link overlapping back button on header. see css -->
+      
+      <h2 id="title-text"> <%= @podcast.title %> </h2>
+    <h3 id = "author-text"><i> <%= @podcast.author %></i> </h3> 
+  </div>
+</div>
+
+<div class="row" id ="content-button-row">
+  <div class="sm-col-12 text-center">
     <%= link_to "Explore again", podcast_path(@podcast.random_podcast), class: "btn btn-primary btn-lg" %>
     <%= link_to "Dig deeper", podcast_path(@podcast.next_similar_podcast(@authors)), class: "btn btn-primary btn-lg", id: "dip-deeper" %>
   </div>
+</div>
+
 </div>
 
 <%= render "shared/rating_modal" %>

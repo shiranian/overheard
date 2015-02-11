@@ -19,6 +19,13 @@ the podcast player
     width:55%;
 }
 
+
+#background-color-change {
+    
+    background-color: #006666;
+    
+}
+
 #add-to-book {
     
     width: 25px;
@@ -68,6 +75,23 @@ the podcast player
 }
 
 
+#title-text{
+    
+    margin:0;
+    font-size:2.1em;
+    background-color: #009999;
+    margin-bottom: 2px;
+}
+
+#author-text{
+    
+    margin:0;
+    margin-top: 10px;
+    font-size: 1.2em;
+    background-color: #009999;
+}
+
+
 #back-button {
     
     height: 25px;
@@ -76,3 +100,20 @@ the podcast player
     margin:7px 10px 0 10px;
     
 }
+
+#content-button-row {
+    margin-bottom: 10px;
+    padding:10px 0 3px 0;
+    
+}
+
+
+.image-reponsive{
+    
+    margin-bottom: 0px;
+}
+
+
+
+
+
