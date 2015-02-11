@@ -21,7 +21,9 @@ the podcast player
 
 #add-to-book {
     
-    padding:5px;
+    width: 25px;
+    height: 35px; //for some reason, someones substracts 10px. so 35 -10 = 25px , same as width
+    padding: 9px 0 1px 0;
     
 }
 
@@ -29,5 +31,15 @@ the podcast player
 #podcast-mood {
     
     
+    
+}
+
+
+#back-button {
+    
+    height: 25px;
+    width:17px;
+    padding-right: 3px;
+    margin:7px 10px 0 10px;
     
 }
