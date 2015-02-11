@@ -102,7 +102,8 @@ the podcast player
 }
 
 #content-button-row {
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
+    
     padding:10px 0 3px 0;
     
 }
@@ -111,6 +112,11 @@ the podcast player
 .image-reponsive{
     
     margin-bottom: 0px;
+}
+
+#text-row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 
