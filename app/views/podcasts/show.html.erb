@@ -47,8 +47,8 @@
       <%= image_tag('button_player.png', id:"button_player") %>
     <!--<%= link_to "Explore again", podcast_path(@podcast.random_podcast), class: "btn btn-primary btn-lg " %>-->
       <%= link_to "Explore again", podcast_path(@podcast.random_podcast), class: "b_link_left" %>
-      <%= image_tag('play_dark.png', id:"play_dark") %>
-      <%= image_tag('button_player.png', id:"button_player") %>
+      <!--<%= image_tag('play_dark.png', id:"play_dark") %> -->
+      <%= image_tag('button_player.png', id:"button_player") %> 
     <!--<%= link_to "Dig deeper", podcast_path(@podcast.next_similar_podcast(@authors)), class: "btn btn-primary btn-lg", id: "dip-deeper" %> -->
       <%= link_to "Dig deeper", podcast_path(@podcast.next_similar_podcast(@authors)), class: "b_link_right", id: "dip-deeper" %>
   </div>
