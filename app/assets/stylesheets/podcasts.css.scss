@@ -1,3 +1,171 @@
 // Place all the styles related to the podcasts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*
+
+This file contains all of the styles for the new page podcast and
+the podcast player
+
+*/
+
+
+#podcast_tag_list::-webkit-input-placeholder {
+    color:gray;
+}
+
+#podcast_tag_list {
+    width:55%;
+}
+
+
+#background-color-change {
+    
+    background-color: #006666;
+    
+}
+
+#add-to-book {
+    
+    width: 25px;
+    height: 35px; //for some reason, someones substracts 10px. so 35 -10 = 25px , same as width
+    padding: 9px 0 1px 0;
+    
+}
+
+.bbtn {
+    
+    height: 25px;
+    width:17px;
+    padding-right: 3px;
+    margin:7px 10px 0 10px;
+   
+    
+}
+
+#mock{
+    height: 25px;
+    width: 25px;
+    
+    position:absolute;
+    top: 6.5%;
+    left:2%;
+}
+
+.back {
+    
+    position: relative;
+    background: url('images/back.png');
+    height: 25px;
+    width:25px;
+    display:block;
+    overflow:hidden;
+    text-indent:100%;
+    white-space:nowrap;
+    z-index: -100;
+    
+    
+}
+
+#podcast-mood {
+    
+    
+    
+}
+
+
+#title-text{
+    
+    margin:0;
+    font-size:2.1em;
+    background-color: #009999;
+    margin-bottom: 2px;
+    color: white;
+}
+
+#author-text{
+    
+    margin:0;
+    margin-top: 10px;
+    font-size: 1.2em;
+    background-color: #009999;
+    color: white;
+}
+
+
+#back-button {
+    
+    height: 25px;
+    width:17px;
+    padding-right: 3px;
+    margin:7px 10px 0 10px;
+    
+}
+
+#content-button-row {
+    margin: 0 0 10px 0;
+    padding:10px 0 3px 0;
+    
+}
+
+
+.image-reponsive{
+    
+    margin-bottom: 0px;
+    width: 200px;
+}
+
+#text-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+#play_dark {
+    height: 25px;
+    width: 25px;
+    
+}
+
+
+#button_player{
+    
+    height: 20px;
+    width:120px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+/*btn.btn-primary.btn-lg.bt-link{
+    
+    position: relative;
+    background-color: #ffffff;
+    
+}*/
+
+
+.b_link_left{
+    
+    position: absolute;
+    background: transparent;
+    left:14%;
+    bottom:5.7%;
+}
+
+
+.b_link_right{
+    
+    position: absolute;
+    bottom:5.7%;
+    right: 16%;
+    background: transparent;
+}
+
+.b_link_right:hover,.b_link_left:hover {
+    
+    text-decoration: none;
+    color: white;
+    
+}
+

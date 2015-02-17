@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
   <title>Overheard</title>
+    
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="apple-touch-icon-precomposed" href="../../assets/images/logo_desktop.png"/>
+    <!-- the line above sets an icon to show if the user bookmarks this page on their desktop (iOS device) -->
+    
 </head>
 <body>
-  <div class="container-fluid">
-    <%= yield %>
-    <p class="notice text-center"><%= notice %></p>
-    <p class="alert text-center"><%= alert %></p>
+    <div id ="global_box">
+        
+        <div class="container-fluid">
+            <%= yield %>
+            <p class="notice text-center"><%= notice %></p>
+            <p class="alert text-center"><%= alert %></p>
+      
 
-  </div>
+        </div>
+        
+    </div>
 </body>
 </html>

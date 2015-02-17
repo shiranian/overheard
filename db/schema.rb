@@ -21,8 +21,6 @@ ActiveRecord::Schema.define(version: 20141217040638) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "path"
-    t.string   "podcast_image"
-    t.string   "image"
     t.string   "cover_file_name"
     t.string   "cover_content_type"
     t.integer  "cover_file_size"
