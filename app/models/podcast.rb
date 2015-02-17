@@ -24,7 +24,7 @@ has_attached_file :audio, :storage => :s3,
   validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
    acts_as_taggable
 
-  GENRES = %w(curious\ core learning\ corner news\ outlook storytelling people\ &\ ideas experimental)  
+  GENRES = %w(classics learning\ corner news\ outlook storytelling people\ &\ ideas experimental)  
   MOODS = %w(happy sad indifferent)
   
    def next
