@@ -1,14 +1,61 @@
-<%= link_to "Back", root_path, class: "btn btn-primary" %>
-<h3> <%= @podcast.genre.titleize %> </h3>
-<h2> <%= @podcast.title %> </h2>
-<h3><i> <%= @podcast.author %></i> </h3> 
 
-<%= image_tag @podcast.cover.url(:medium), class: "PUT CLASS HERE" %>
-<audio src="<%= @podcast.audio.url%>" controls id="audio">
-</audio>
+<div class="overheard-header">OVERHEARD</div>
 
-<%= link_to "Explore again", podcast_path(@podcast.random_podcast), class: "CAN ADD CLASS HERE" %>
-<%= link_to "Dig deeper", podcast_path(@podcast.next_similar_podcast(@authors)), class: "CAN ADD CLASS HERE", id: "CAN ADD ID LIKE THIS" %>
+<div class="row">
+  <div class="col-sm-12" id="menu-bar"> 
+    <h1 class="text-center" id="mood-title">
+        <%= image_tag "back.png", class:"header-icon-left", id:"back-button" %>
+        <%= image_tag "addtobook.png", class:"header-icon-right", id:"add-to-book" %>
+        <%= @podcast.genre.titleize %>
+      </h1>
+  </div>
+</div>
+
+
+<div class="orange-separator"></div>
+
+
+<div id="background-color-change">
+<div class="row">
+  <div class="sm-col-12 text-center">
+    <%= image_tag @podcast.cover.url(:medium), class: "image-reponsive" %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="sm-col-12 text-center">
+    <audio src="<%= @podcast.audio.url%>" controls id="audio">
+    </audio>
+  </div>
+</div>
+
+<div class="row" id ="text-row">
+  <div class="sm-col-12 text-center">
+            
+    <!-- <%= link_to "Back", root_path, class: "btn btn-primary" %>-->
+    <!--<h3> <%= @podcast.genre.titleize %> </h3>-->
+
+      <%= link_to "", root_path, id:"mock" %> <!--link overlapping back button on header. see css -->
+      
+      <h2 id="title-text"> <%= @podcast.title %> </h2>
+    <h3 id = "author-text"><i> <%= @podcast.author %></i> </h3> 
+  </div>
+</div>
+
+<div class="row" id ="content-button-row">
+  <div class="sm-col-12 text-center">
+      
+      <%= image_tag('button_player.png', id:"button_player") %>
+    <!--<%= link_to "Explore again", podcast_path(@podcast.random_podcast), class: "btn btn-primary btn-lg " %>-->
+      <%= link_to "Explore again", podcast_path(@podcast.random_podcast), class: "b_link_left" %>
+      <!--<%= image_tag('play_dark.png', id:"play_dark") %> -->
+      <%= image_tag('button_player.png', id:"button_player") %> 
+    <!--<%= link_to "Dig deeper", podcast_path(@podcast.next_similar_podcast(@authors)), class: "btn btn-primary btn-lg", id: "dip-deeper" %> -->
+      <%= link_to "Dig deeper", podcast_path(@podcast.next_similar_podcast(@authors)), class: "b_link_right", id: "dip-deeper" %>
+  </div>
+</div>
+
+</div>
 
 <%= render "shared/rating_modal" %>
 
