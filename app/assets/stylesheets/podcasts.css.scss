@@ -23,7 +23,7 @@ the podcast player
 #background-color-change {
     
     background-color: #006666;
-    
+    height: 380px;//same as global box minus the headers elements summed heights
 }
 
 #add-to-book {
@@ -129,12 +129,35 @@ the podcast player
 }
 
 
-#button_player{
+#button_player_left{
     
-    height: 20px;
-    width:120px;
-    margin-left: 16px;
-    margin-right: 16px;
+    height:40px;
+    //width:160px;
+    min-width:80%;
+    max-width: 162px;
+    //margin-left: 0px;
+    //margin-right: 20px;
+    //display:inline-block;
+    margin: 0;
+    margin-left: 12%;
+    display: block;
+    position: absolute;
+}
+
+
+#button_player_right{
+    
+    height:40px;
+    //width:160px;
+    min-width: 80%;
+    max-width: 162px;
+    //margin-left: 20px;
+    //margin-right: 0px;
+    //display:inline-block;
+    display: block;
+    margin: 0;
+    margin-left: 12%;
+    position: absolute;
 }
 
 /*btn.btn-primary.btn-lg.bt-link{
@@ -147,19 +170,34 @@ the podcast player
 
 .b_link_left{
     
-    position: absolute;
+    //position: absolute;
+    //position: relative;
+    
+    //left:14%;
+    //bottom:5.7%;
+    
+ //   right:10%;
+    //bottom: 20%;
+    display: block;
     background: transparent;
-    left:14%;
-    bottom:5.7%;
+    height: 100%;
+    width:100%;
+    position: absolute;
+    
+    
 }
 
 
 .b_link_right{
     
-    position: absolute;
-    bottom:5.7%;
-    right: 16%;
+    //position: absolute;
+    //bottom:5.7%;
+    //right: 16%;
+    display: block;
     background: transparent;
+    height: 100%;
+    width:100%;
+    position: absolute;
 }
 
 .b_link_right:hover,.b_link_left:hover {
@@ -168,4 +206,13 @@ the podcast player
     color: white;
     
 }
+
+.link_action{
+    
+    display: inline-block;
+    width: 49%;
+    position: relative;
+    
+}
+
 

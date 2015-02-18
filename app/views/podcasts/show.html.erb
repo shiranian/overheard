@@ -44,13 +44,21 @@
 <div class="row" id ="content-button-row">
   <div class="sm-col-12 text-center">
       
-      <%= image_tag('button_player.png', id:"button_player") %>
+    <div class="link_action">  
+       <%= image_tag('button_player.png', id:"button_player_left") %>
     <!--<%= link_to "Explore again", podcast_path(@podcast.random_podcast), class: "btn btn-primary btn-lg " %>-->
+      
       <%= link_to "Explore again", podcast_path(@podcast.random_podcast), class: "b_link_left" %>
+        
+        </div>
       <!--<%= image_tag('play_dark.png', id:"play_dark") %> -->
-      <%= image_tag('button_player.png', id:"button_player") %> 
+      
+      <div class="link_action">
+      <%= image_tag('button_player.png', id:"button_player_right") %> 
     <!--<%= link_to "Dig deeper", podcast_path(@podcast.next_similar_podcast(@authors)), class: "btn btn-primary btn-lg", id: "dip-deeper" %> -->
-      <%= link_to "Dig deeper", podcast_path(@podcast.next_similar_podcast(@authors)), class: "b_link_right", id: "dip-deeper" %>
+     <%= link_to "Dig deeper", podcast_path(@podcast.next_similar_podcast(@authors)), class: "b_link_right", id: "dip-deeper" %>
+          
+          </div>
   </div>
 </div>
 
