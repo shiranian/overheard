@@ -140,10 +140,9 @@ input[type="file"] {
 @media only screen 
     and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait),
 only screen
-    and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: landscape),
-only screen 
-    and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+    and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 1){
+        
         
     #global_box,.container-fluid{
     
@@ -158,16 +157,7 @@ only screen
         
     }
         
-    body{
-        
-       // padding:0;
-        //width: auto;
-        //height: auto;
-      //  overflow-x:hidden;
-    //    overflow-y:hidden;
-    }   
-        
-        
+              
    div.row{
        margin-left:0;
        margin-right: 0;
@@ -185,10 +175,62 @@ only screen
   }
         
         
-
+.image-reponsive{
+    
+    margin-bottom: 0px;
+    width: 310px;
+    height: 310px;
+}
+        
+        
         
 }
 
+@media only screen 
+    and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
+        
+        
+             
+    #global_box{
+    
+    position: absolute;
+    top:10%;
+    left:10%;    
+    width:80%;
+    height:80%;
+    background: #009999;
+    margin:0;
+    
+        
+    }
+        
+              
+   div.row{
+       margin-left:0;
+       margin-right: 0;
+   }  
+        
+    div.col-sm-12{
+        
+        padding-right: 0;
+        padding-left: 0;
+    }
+        
+        
+  #background-color-change{
+      height: 110%;
+  }
+        
+        
+.image-reponsive{
+    
+    margin: 12px 0px 12px 0px;
+    width: 430px;
+    height: 430px;
+}
+           
+        
+    }
 
 
 
