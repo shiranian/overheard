@@ -40,10 +40,19 @@
       </div>
         
         <!-- signin alert should be here, cant find ruby or js method that adds it -->
-        <div class="contact-email">
-        <p>ohpodcast@gmail.com</p>
+        <div id="contact-box">
+        <div id="facebook-div" >
+        <p id="fb-link">Find us on 
+            <!--<a href="https://www.facebook.com/ohpodcasts" id="hyper-fb-link">Facebook</a>-->
+            <%= link_to 'Facebook','https://www.facebook.com/ohpodcasts', id:"hyper-fb-link" %>
+            </p>
         </div>
-    </div>
+        
+        <div class="contact-email">
+        <p>ohpodcasts@gmail.com</p>
+        </div>
+        
+        </div>
   </div>
   <script>
     $("#hitme").click(function() {
