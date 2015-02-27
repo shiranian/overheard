@@ -18,12 +18,17 @@
 
 @font-face {
   font-family: 'AntennaThin';
-  src:font-url('fonts/antennablack.ttf');
   src:font-url('fonts/antennathin.ttf');
-  src:font-url('antennamedium.ttf');
 }
 
-
+@font-face {
+  font-family: 'AntennaBlack';
+  src:font-url('fonts/antennablack.ttf');
+}
+@font-face {
+  font-family: 'AntennaMedium';
+  src:font-url('antennamedium.ttf');
+}
 audio {
   width: 75%;
   margin-bottom: 0px;
