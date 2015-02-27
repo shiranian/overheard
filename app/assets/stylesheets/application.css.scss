@@ -16,6 +16,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@font-face {
+  font-family: 'AntennaBlack';
+  src:font-url('fonts/antennablack.ttf');
+  src:font-url('fonts/antennathin.ttf');
+  src:font-url('antennamedium.ttf');
+}
+
+
 audio {
   width: 75%;
   margin-bottom: 0px;
