@@ -136,11 +136,12 @@ input[type="file"] {
 
 /* STYLE RULES FOR MOBILE DEVICES */
 
-@media only screen 
-    and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait),
-only screen
-    and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: landscape)
+@media 
+only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait),
+only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: landscape)
     and (-webkit-min-device-pixel-ratio: 1){
+        
+        
         
         
     #global_box,.container-fluid{
@@ -183,7 +184,8 @@ only screen
         
         
         
-}
+}// generic HD
+
 
 @media only screen 
     and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
@@ -226,12 +228,62 @@ only screen
     margin: 12px 0px 12px 0px;
     width: 430px;
     height: 430px;
+    
 }
            
+}
+
+
+
+
+@media (device-height : 568px)   and (device-width : 320px)  and (-webkit-min-device-pixel-ratio: 2){
+                 /*iPhone 5 only CSS here*/
+
+    /* iPhone 5 only */
+   .container-fluid{
+    
+    position: absolute;
+    top:0%;
+    left:0%;    
+    width:320px;
+    height:100%;
+    background: #009999;
+    margin:0;
+    
         
     }
-
-
+        
+    div#global_box{
+        min-width: 320px;
+    }
+    
+              
+   div.row{
+       margin-left:0;
+       margin-right: 0;
+   }  
+        
+    div.col-sm-12{
+        
+        padding-right: 0;
+        padding-left: 0;
+    }
+        
+        
+  #background-color-change{
+      height: 430px;
+  }
+        
+        
+.image-reponsive{
+    
+    margin-bottom: 0px;
+    width: 63%; // 70% for chrome, 63% for safari
+    height: 63%;
+}
+     
+    
+}
 
 /* STYLE RULES FOR MOBILE DEVICES */
 

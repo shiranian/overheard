@@ -5,7 +5,7 @@
     <h1 class="text-center" id="mood-title">
         <%= image_tag "back.png", class:"header-icon-left", id:"back-button" %>
         <%= image_tag "addtobook.png", class:"header-icon-right", id:"add-to-book" %>
-        <%= @podcast.genre.titleize %>
+        <%= @podcast.genre.titleize %></p>
       </h1>
   </div>
 </div>
@@ -29,7 +29,7 @@
 </div>
 
 <div class="row" id ="text-row">
-  <div class="sm-col-12 text-center">
+  <div class="sm-col-12 text-center scaler">
             
     <!-- <%= link_to "Back", root_path, class: "btn btn-primary" %>-->
     <!--<h3> <%= @podcast.genre.titleize %> </h3>-->
@@ -37,7 +37,8 @@
       <%= link_to "", root_path, id:"mock" %> <!--link overlapping back button on header. see css -->
       
       <h2 id="title-text"> <%= @podcast.title %> </h2>
-    <h3 id = "author-text"><i> <%= @podcast.author %></i> </h3> 
+      <h3 id = "author-text"><i> <%= @podcast.author %></i> </h3> 
+      
   </div>
 </div>
 
@@ -63,5 +64,16 @@
 </div>
 
 <%= render "shared/rating_modal" %>
+
+
+
+<script>
+  jQuery("#author-text").fitText(2.3);
+  jQuery("#title-text").fitText(1.4);
+  jQuery("#author-text").fitText(2.3);
+</script>
+    
+    
+    
 
 
