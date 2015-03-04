@@ -5,7 +5,7 @@
     <h1 class="text-center" id="mood-title">
         <%= image_tag "back.png", class:"header-icon-left", id:"back-button" %>
         <%= image_tag "addtobook.png", class:"header-icon-right", id:"add-to-book" %>
-        <%= @podcast.genre.titleize %></p>
+        <p id="podcast-mood"><%= @podcast.genre.titleize %></p>
       </h1>
   </div>
 </div>
@@ -70,7 +70,7 @@
 <script>
   jQuery("#author-text").fitText(2.3);
   jQuery("#title-text").fitText(1.4);
-  jQuery("#author-text").fitText(2.3);
+  //jQuery("#author-text").fitText(2.3);
 </script>
     
     
