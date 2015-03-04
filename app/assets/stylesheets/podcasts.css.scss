@@ -34,6 +34,15 @@ the podcast player
     
 }
 
+#back-button-container{
+    position:absolute;
+    
+    height: 25px;
+    width: 25px;
+    top:20%;
+}
+
+
 .bbtn {
     
     height: 25px;
@@ -44,14 +53,31 @@ the podcast player
     
 }
 
-#mock{
+#back-button-link{
+    
     height: 25px;
     width: 25px;
-    
     position:absolute;
     top: 6.5%;
     left:2%;
 }
+
+#back-button-image{
+    
+    position: absolute;
+    height: 25px;
+    width:17px;
+    margin: 0 0 0 3px;
+    top: 0;
+    left: 0;
+    background: url('images/back.png');
+    display: block;
+    z-index: 0;
+    
+}
+
+
+
 
 .back {
     
@@ -93,15 +119,6 @@ the podcast player
     color: white;
 }
 
-
-#back-button {
-    
-    height: 25px;
-    width:17px;
-    padding-right: 3px;
-    margin:7px 10px 0 10px;
-    
-}
 
 #content-button-row {
     margin: 0 0 10px 0;
