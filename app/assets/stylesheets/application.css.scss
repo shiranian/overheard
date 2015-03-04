@@ -292,14 +292,19 @@ only screen and (min-device-width: 320px) and (max-device-width: 736px) and (ori
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation:portrait){
     // iPhone 4 and 4S
     
+    
+    body{
+        background: #009999;
+    }
+    
     .container-fluid{
     
     position: absolute;
     top:0%;
     left:0%;    
     width:320px;
-    min-height: 380px;
-    height: 380px;
+    min-height: 320px;
+    height: 320px;
     background: #009999;
     margin:0;
     
@@ -308,8 +313,8 @@ only screen and (min-device-width: 320px) and (max-device-width: 736px) and (ori
         
     div#global_box{
         min-width: 320px;
-        min-height: 380px;
-        height: 380px;
+        min-height: 320px;
+        height: 320px;
        
     }
     
@@ -344,6 +349,12 @@ only screen and (min-device-width: 320px) and (max-device-width: 736px) and (ori
     }
     
     
+    .logo-with-name {
+    
+    height:140px;
+    width:115px;
+    margin-bottom: 0px;
+}
     
     
 }
