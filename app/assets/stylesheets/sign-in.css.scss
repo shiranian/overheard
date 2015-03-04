@@ -39,6 +39,11 @@ the sign-in and sign-up pages
     
 }
 
+.decor-off:hover{
+    text-decoration: none;
+    color:white;
+}
+
 
 #simple-or-text{
     
@@ -72,6 +77,12 @@ input[type="submit"]{
 #new-user {
  width:inherit;
 }
+
+sign-up-button{
+    border-radius: 0;
+}
+
+
 
 /* Placeholder text to white for diferent browsers */
 ::-webkit-input-placeholder {

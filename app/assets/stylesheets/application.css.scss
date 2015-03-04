@@ -281,7 +281,70 @@ only screen and (min-device-width: 320px) and (max-device-width: 736px) and (ori
     width: 63%; // 70% for chrome, 63% for safari
     height: 63%;
 }
-     
+ 
+    audio{
+        margin-top: 4px;
+    }
+    
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation:portrait){
+    // iPhone 4 and 4S
+    
+    .container-fluid{
+    
+    position: absolute;
+    top:0%;
+    left:0%;    
+    width:320px;
+    min-height: 380px;
+    height: 380px;
+    background: #009999;
+    margin:0;
+    
+        
+    }
+        
+    div#global_box{
+        min-width: 320px;
+        min-height: 380px;
+        height: 380px;
+       
+    }
+    
+              
+   div.row{
+       margin-left:0;
+       margin-right: 0;
+   }  
+        
+    div.col-sm-12{
+        
+        padding-right: 0;
+        padding-left: 0;
+    }
+        
+        
+  #background-color-change{
+        //min-height: 380px;
+        height: 100%;
+  }
+        
+        
+.image-reponsive{
+    
+    margin-bottom: 0px;
+    width: 123px; // small image, but sits nice in safari. 
+    height: 123px;
+}
+ 
+    audio{
+        margin-top: 4px;
+    }
+    
+    
+    
     
 }
 
